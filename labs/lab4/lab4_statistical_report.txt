@@ -1,0 +1,82 @@
+Lab 4 Statistical Analysis Report
+========================================
+
+Concrete Strength Descriptive Statistics:
+          strength_mpa
+count         100.0000
+mean           35.0600
+median         34.2000
+mode           31.8000
+min            21.8000
+q1             31.1000
+q3             39.1250
+max            47.1000
+variance       37.9788
+std_dev         6.1627
+range          25.3000
+iqr             8.0250
+skewness        0.0466
+kurtosis       -0.7009
+
+Structural Load Summary Statistics:
+                      count    mean    std     min     25%     50%     75%     max
+structural_load_kN 192.0000 29.9073 3.2847 22.4000 27.4000 29.8500 32.3250 37.3000
+
+Probability Scenario Results:
+- Bernoulli mean [p=0.95]: 0.9500
+- Bernoulli variance [p=0.95]: 0.0475
+- Binomial P(X=3) [n=100, p=0.05]: 0.1396
+- Binomial P(X<=5) [n=100, p=0.05]: 0.6160
+- Poisson P(X=8) [lambda=10]: 0.1126
+- Poisson P(X>15) [lambda=10]: 0.0487
+- Normal P(X>280) [mu=250, sigma=15]: 0.0228
+- Normal 95th percentile [mu=250, sigma=15]: 274.6728
+- Exponential P(X<500) [mean=1000]: 0.3935
+- Exponential P(X>1500) [mean=1000]: 0.2231
+
+Distribution Sample vs. Theoretical Statistics:
+- Bernoulli (p=0.95):
+    Sample mean: 0.9475
+    Theoretical mean: 0.9500
+    Sample variance: 0.0498
+    Theoretical variance: 0.0475
+- Uniform (20, 40):
+    Sample mean: 29.8140
+    Theoretical mean: 30.0000
+    Sample variance: 32.9812
+    Theoretical variance: 33.3333
+- Binomial (n=100, p=0.05):
+    Sample mean: 4.9988
+    Theoretical mean: 5.0000
+    Sample variance: 4.8225
+    Theoretical variance: 4.7500
+- Normal (mean=250, std=15):
+    Sample mean: 249.6910
+    Theoretical mean: 250.0000
+    Sample variance: 223.2103
+    Theoretical variance: 225.0000
+- Poisson (lambda=10):
+    Sample mean: 10.0953
+    Theoretical mean: 10.0000
+    Sample variance: 10.1487
+    Theoretical variance: 10.0000
+- Exponential (mean=1000):
+    Sample mean: 995.5684
+    Theoretical mean: 1000.0000
+    Sample variance: 1021409.7464
+    Theoretical variance: 1000000.0000
+
+Material Strength Summary (mean and standard deviation):
+ material  count     mean     std
+ Aluminum     50 196.6320  7.6333
+Composite     50 299.0420 10.3844
+ Concrete     50  36.2580  2.2187
+    Steel     50 399.0980 10.3984
+
+Bayes' Theorem Posterior Probability:
+P(Damage | Positive Test) = 0.3333
+
+Engineering Interpretation:
+- Concrete strengths show central tendency around the mean with variability captured by standard deviation.
+- Probability analysis informs quality control (binomial), load forecasting (Poisson), material reliability (Normal), and component lifetime (Exponential).
+- Despite high test sensitivity, the posterior probability underscores the impact of false positives on structural damage assessments.
